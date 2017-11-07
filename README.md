@@ -1,19 +1,17 @@
-# Pacman
+<h1><b>PACMAN</b></h1>
+<p style="font-family: verdana"> ΔΑΝΑΗ ΑΝΑΣΤΑΣΟΠΟΥΛΟΥ ΚΟΥΒΑΡΑ</p>
+<p style="font-family: verdana">Π2011043</p>
+<p style="font-family: verdana"></p>
 
-## Initial Settings
-- Από την στιγμή που έχεις κάνει αντιγραφή (fork) το [αποθετήριο](https://github.com/ioniodi/pacman) του παιχνιδιού, θα πρέπει να έχει κατέβει στο προσωπικό σου github αποθετήριο ο [κώδικας του παιχνιδιού](index.html) και ο φάκελος [assets](/assets/) με τα αντικείμενα (πίστες, εικόνες) που θα χρησιμοποιήσεις στο παιχνίδι σου.
 
-- Ενεργοποίησε το Github Pages στα setting του προσωπικού σου repository και *άλλαξε το λινκ στην κορυφή του αποθετηρίου σου ώστε να δείχνει στην σελίδα του παιχνιδιού σου.*
-![ScreenShot](1.png)
+<h2><b> ΠΑΡΑΔΟΤΕΟ 1:</b></h2>
+<p style="font-family: verdana">Αντιγραφή του αποθετηρίου</p>
+<p style="font-family: verdana">Αλλαγές στο GitHub Pages</p>
 
-- Στο [index.html](index.html) άλλαξε το ioniodi με το δικό σου username.
-![ScreenShot](2.png)
-
-## Notes
-- Στην περίπτωση που κάποιος θέλει εναλλακτικά να τρέξει το παιχνίδι **τοπικά** μπορεί να ακολουθήσει τις οδηγίες από το [επίσημο site](http://phaser.io/tutorials/getting-started/index). Προτεινόμενος local web server: [xampp](https://www.apachefriends.org/index.html). Editor μπορείτε να βρείτε από [εδώ](http://phaser.io/tutorials/getting-started/part4) ή να χρησιμοποιήσετε το [eclipse](http://www.eclipse.org/) ακολουθώντας τις οδηγίες που δίνονται [εδώ](http://www.html5gamedevs.com/topic/22688-setting-up-eclipse-to-work-with-phaser-how-to/). **Προσοχή:** Για να βαθμολογηθεί το παιχνίδι πρέπει να βρίσκεται υποχρεωτικά στην προσωπική σας github page. 
-
-## Resources
-- [Phaser Tutorial](http://phaser.io/learn)
-- [Official Phaser Tutorials](https://phaser.io/learn/official-tutorials)
-- [Phaser Examples](http://phaser.io/examples)
-- [Javascript tutorial](http://www.w3schools.com/js/)
+<h2><b> ΠΑΡΑΔΟΤΕΟ 2:</b></h2>
+<p style="font-family: verdana"> Αντικαταστήθηκε η εμφάνιση του Pacman με ένα Panda. </p>
+<p style="font-family: verdana"> Το Panda μαζεύει bamboo αντί για dots, καθώς και μπανάνες.</p>
+<p style="font-family: verdana"> Προστέθηκε μουσική όταν ξεκινάει το παιγνίδι.</p>
+<p style="font-family: verdana"> Προστέθηκε ήχος επιτυχίας όταν τερματίζει το level και ήχος αποτυχίας σε περίπτωση που σκοτώνει το Panda o Κυνηγός. </p>
+<p style="font-family: verdana"> Επεκτάθηκε το παιγνίδι με score, bonus και ζωές.</p>
+<p style="font-family: verdana"> Τα icons βρέθηκαν στο google και επεξεργάστηκαν με το πρόγραμμα που βρίσκεται <a href="http://resizeimage.net/"> εδώ</a> . </p>
