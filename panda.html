@@ -230,7 +230,7 @@
             dot.kill();
             score += 1;
             scoretxt.text = 'Score: ' + score;
-            if (this.dots.total === 0)
+            if (this.dots.total == 100)
             {
 	 	this.GameOver = game.add.text(45, 170, 'YOU WON! :)', {font: '60px Verdana', fill: 'green'});
 		this.GameOver2 = game.add.text(45, 255, 'PLAY AGAIN', { font: '50px Verdana', fill: "green"});
@@ -238,6 +238,7 @@
 		audio.play();
 		this.pacman.kill();
             }
+	    
         },
 	   
 	takeBonus: function (pacman, bonus) {
