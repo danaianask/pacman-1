@@ -36,6 +36,10 @@
         this.layer = null;
         this.pacman = null;
 	this.ghost = null;
+	    //
+	this.ghost2 = null;
+	this.ghost3 = null;
+	    //
         this.safetile = 14;
         this.gridsize = 16;
         this.speed = 150;
@@ -128,6 +132,12 @@
             }
             else{
                 this.ghost.body.velocity.x = ghostSpeed;
+		  if(ghost2 != null){
+			this.ghost2.body.velocity.x = ghostSpeed;
+		  }
+		  if(ghost3!=null){
+			this.ghost3.body.velocity.x = ghostSpeed;
+		}
             }
             if (this.pacman.body.y <this.ghost.body.y){
                 this.ghost.body.velocity.y = ghostSpeed * -1;
@@ -283,13 +293,20 @@
         },
 	    
         update: function () {
-            if (this.dots.total==10 || this.dots.total===10){
+		////
+            if (lives == 2){
 	 	this.GameOver = game.add.text(45, 170, 'YOU WON! :)', {font: '60px Verdana', fill: 'green'});
 		this.GameOver2 = game.add.text(45, 255, 'PLAY AGAIN', { font: '50px Verdana', fill: "green"});
 		var audio = new Audio('assets/win.mp3');
 		audio.play();
-		this.pacman.kill();
-            }
+		//this.pacman.kill();
+		this.ghost2 = this.ghost;
+				//this.map = this.add.tilemap('map');
+				//this.map.addTilesetImage('pacman-tiles2', 'tiles');
+            }else if(lives == 1){
+		this.ghost3 = this.ghost;
+	    }
+		///
 	     this.ghost.scale.x = 1;
 	     if(this.ghost.angle == 0)
              {
