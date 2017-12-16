@@ -230,13 +230,6 @@
             dot.kill();
             score += 1;
             scoretxt.text = 'Score: ' + score;
-            if (this.score == 10){
-	 	this.GameOver = game.add.text(45, 170, 'YOU WON! :)', {font: '60px Verdana', fill: 'green'});
-		this.GameOver2 = game.add.text(45, 255, 'PLAY AGAIN', { font: '50px Verdana', fill: "green"});
-		var audio = new Audio('assets/win.mp3');
-		audio.play();
-		this.pacman.kill();
-            }
 	    
         },
 	   
@@ -337,14 +330,19 @@
             this.directions[3] = this.map.getTileAbove(this.layer.index, this.marker.x, this.marker.y);
             this.directions[4] = this.map.getTileBelow(this.layer.index, this.marker.x, this.marker.y);
             this.checkKeys();
-	    alert('EDW');	
-		
             if (this.turning !== Phaser.NONE)
             {
                 this.turn();
             }
-          
+            if (this.score == 10){
+	 	this.GameOver = game.add.text(45, 170, 'YOU WON! :)', {font: '60px Verdana', fill: 'green'});
+		this.GameOver2 = game.add.text(45, 255, 'PLAY AGAIN', { font: '50px Verdana', fill: "green"});
+		var audio = new Audio('assets/win.mp3');
+		audio.play();
+		this.pacman.kill();
+            }
         }
+	    
     };
     game.state.add('Game', Pacman, true);
     </script>
