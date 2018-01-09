@@ -333,7 +333,7 @@
 	    
         update: function () {
 		////
-         if (lives == 2 && this.ghost2!=null){
+         if (lives == 2 && this.ghost2==null){
 		//this.pacman.kill();
 			this.load.spritesheet('ghost2', 'assets/huntx70.png', 40, 40);
 			this.ghost2 = this.add.sprite((3 * 16) + 8, (5 * 16) + 8, 'ghost', 0);
@@ -343,7 +343,7 @@
 				//this.map = this.add.tilemap('map');
 				//this.map.addTilesetImage('pacman-tiles2', 'tiles');
          }
-		 if(lives == 1 && this.ghost3 != null){
+		 if(lives == 1 && this.ghost3 == null){
 			this.load.spritesheet('ghost3', 'assets/huntx70.png', 40, 40);
 			this.ghost3 = this.add.sprite((3 * 16) + 8, (5 * 16) + 8, 'ghost', 0);
            	this.ghost3.anchor.set(0.5);
