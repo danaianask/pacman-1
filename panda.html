@@ -119,7 +119,7 @@
             this.pacman.play('munch');
             this.move(Phaser.LEFT);
 	
-	    livesText = game.add.text(365, -5, 'Lives: ' + lives, {font: '22px Verdana', fill: 'green'});
+	    livesText = game.add.text(365, -5, 'New ' + lives, {font: '22px Verdana', fill: 'green'});
 	    scoretxt = game.add.text(10, -5, 'Score: 0', {font: '22px Verdana', fill: 'red'})
 	    this.TextBonus = game.add.text(180, -5, 'Bonus: 0', { font: '22px Verdana', fill: 'yellow' });
         },
@@ -315,6 +315,16 @@
 			this.ghost.body.setSize(16, 16, 0, 0);
 			this.ghost.play('munch');
 				
+			if(this.ghost2 != null){
+				this.ghost2.destroy();
+				this.ghost2 = this.add.sprite((14 * 16) + 8, (11 * 16) + 8, 'ghost', 0);
+				this.ghost2.anchor.set(0.5);
+				this.ghost2.animations.add('munch', [0, 1, 2, 1], 20, true);
+				this.physics.arcade.enable(this.ghost2);
+				this.ghost2.body.setSize(16, 16, 0, 0);
+				this.ghost2.play('munch');
+			}	
+				
 			
 			lives--;
 			livesText.text = ' ' + lives;
@@ -323,7 +333,7 @@
 	    
         update: function () {
 		////
-         if (lives == 2){
+         if (lives == 2 && this.ghost2!=null){
 		//this.pacman.kill();
 			this.load.spritesheet('ghost2', 'assets/huntx70.png', 40, 40);
 			this.ghost2 = this.add.sprite((3 * 16) + 8, (5 * 16) + 8, 'ghost', 0);
@@ -332,7 +342,8 @@
            	this.ghost2.body.setSize(16, 16, 0, 0);
 				//this.map = this.add.tilemap('map');
 				//this.map.addTilesetImage('pacman-tiles2', 'tiles');
-         }else if(lives == 1){
+         }
+		 if(lives == 1 && this.ghost3 != null){
 			this.load.spritesheet('ghost3', 'assets/huntx70.png', 40, 40);
 			this.ghost3 = this.add.sprite((3 * 16) + 8, (5 * 16) + 8, 'ghost', 0);
            	this.ghost3.anchor.set(0.5);
