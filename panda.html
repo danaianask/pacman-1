@@ -280,8 +280,9 @@
             this.Bonus += 10;
             this.TextBonus.text = 'Bonus:' + this.Bonus;
         
-            if(this.bonus.total=== 0){
-           	 this.bonus.callAll('revive');
+            if(this.bonus.total=== 30 || this.bonus.total=== 60){
+           	 //this.bonus.callAll('revive');
+				lives+=1;
             }
 		     
         },
@@ -341,9 +342,7 @@
            	this.ghost2.anchor.set(0.5);
            	this.physics.arcade.enable(this.ghost2);
            	this.ghost2.body.setSize(16, 16, 0, 0);
-				///
-				
-				///
+		
          }
 		 if(lives == 1 && this.ghost3 == null){
 			this.load.spritesheet('ghost3', 'assets/huntx70.png', 40, 40);
@@ -353,6 +352,16 @@
            	this.ghost3.body.setSize(16, 16, 0, 0);
 	    }
 		///
+		
+		//document.body.style.backgroundImage = "url('kung-fu-panda.jpg')";
+			//	this.load.image('tiles', 'assets/pacman-tiles-New.png');
+				//this.load.tilemap('map', 'assets/newlevel.json', null, Phaser.Tilemap.TILED_JSON);
+			//	this.map = this.add.tilemap('map');
+			//	this.map.addTilesetImage('pacman-tiles', 'tiles');
+			//	this.layer = this.map.createLayer('Pacman');
+		
+		
+		
 	     this.ghost.scale.x = 1;
 	    if(this.ghost.angle == 0)
              {
