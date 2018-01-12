@@ -281,8 +281,8 @@
             this.TextBonus.text = 'Bonus:' + this.Bonus;
         
             if(this.bonus === 30 || this.bonus === 60){
-           	 //this.bonus.callAll('revive');
-				lives+=1;
+			lives++;
+			livesText.text = ' ' + lives;
             }
 		     
         },
