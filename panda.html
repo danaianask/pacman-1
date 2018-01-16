@@ -120,7 +120,7 @@
             this.pacman.play('munch');
             this.move(Phaser.LEFT);
 	
-	    livesText = game.add.text(365, -5, 'New ' + lives, {font: '22px Verdana', fill: 'green'});
+	    livesText = game.add.text(365, -5, 'Lives ' + lives, {font: '22px Verdana', fill: 'green'});
 	    scoretxt = game.add.text(10, -5, 'Score: 0', {font: '22px Verdana', fill: 'red'})
 	    this.TextBonus = game.add.text(180, -5, 'Bonus: 0', { font: '22px Verdana', fill: 'yellow' });
         },
@@ -128,6 +128,12 @@
 	    
 	 catchMe: function(){
             var ghostSpeed = 100;
+		if(score == 200){
+				ghostSpeed = 0;
+			}else{
+				ghostSpeed = 100;
+			}	 
+		 
             if (this.pacman.body.x < this.ghost.body.x) {
                 this.ghost.body.velocity.x = ghostSpeed * -1;
             }
