@@ -128,11 +128,15 @@
 	    
 	 catchMe: function(){
             var ghostSpeed = 100;
-		if(score == 200){
+		if(score >= 150 && score <= 200 ){
 				ghostSpeed = 0;
-			}else{
-				ghostSpeed = 100;
-			}	 
+			}
+                  else if(score >=250){
+                      ghostspeed = 150;
+                  }
+                  else{
+	            ghostSpeed = 100;
+	          }	 
 		 
             if (this.pacman.body.x < this.ghost.body.x) {
                 this.ghost.body.velocity.x = ghostSpeed * -1;
@@ -359,9 +363,12 @@
 	    }
 		
 	     this.ghost.scale.x = 1;
-	   if(score == 200){
+	   if(score >= 150 && score <= 200 ){
 				ghostSpeed = 0;
-			}else{
+			}
+                  else if(score >=250){
+                      ghostspeed = 150;
+                  }
 				ghostSpeed = 100;
 			}
 		
