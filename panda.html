@@ -128,10 +128,10 @@
 	    
 	 catchMe: function(){
             var ghostSpeed = 100;
-		if(score >= 150 && score <= 200 ){
+		if(score >= 150 && score <= 160 ){
 				ghostSpeed = 0;
 			}
-                  else if(score >=250){
+                  else if(score >=180){
                       ghostSpeed = 150;
                   }
                   else{
@@ -290,7 +290,7 @@
             this.Bonus += 10;
             this.TextBonus.text = 'Bonus:' + this.Bonus;
         
-            if(this.Bonus == 150 || this.Bonus == 350){
+            if(this.Bonus == 200 || this.Bonus == 350){
 			lives++;
 			livesText.text = 'Lives: ' + lives;
             }
@@ -354,7 +354,7 @@
            	this.ghost2.body.setSize(16, 16, 0, 0);
 		
          }
-		 if(lives == 1 && this.ghost3 == null || this.ghost2==null && Math.floor(this.game.time.totalElapsedSeconds()) == 40){
+		 if(lives == 1 && this.ghost3 == null || this.ghost3==null && Math.floor(this.game.time.totalElapsedSeconds()) == 40){
 			this.load.spritesheet('ghost3', 'assets/huntx70.png', 40, 40);
 			this.ghost3 = this.add.sprite((3 * 16) + 8, (5 * 16) + 8, 'ghost', 0);
            	this.ghost3.anchor.set(0.5);
@@ -363,10 +363,10 @@
 	    }
 		
 	     this.ghost.scale.x = 1;
-	   if(score >= 150 && score <= 200 ){
+	   if(score >= 150 && score <= 160 ){
 				ghostSpeed = 0;
 			}
-                  else if(score >=220){
+                  else if(score >=180){
                       ghostSpeed = 180;
                   }else{
 				ghostSpeed = 100;
