@@ -120,7 +120,7 @@
             this.pacman.play('munch');
             this.move(Phaser.LEFT);
 	
-	    livesText = game.add.text(350, -5, 'New ' + lives, {font: '22px Verdana', fill: 'green'});
+	    livesText = game.add.text(350, -5, 'Lives ' + lives, {font: '22px Verdana', fill: 'green'});
 	    scoretxt = game.add.text(10, -5, 'Score: 0', {font: '22px Verdana', fill: 'red'})
 	    this.TextBonus = game.add.text(180, -5, 'Bonus: 0', { font: '22px Verdana', fill: 'yellow' });
         },
@@ -290,7 +290,7 @@
             this.Bonus += 10;
             this.TextBonus.text = 'Bonus:' + this.Bonus;
         
-            if(this.Bonus == 30 || this.Bonus == 100 || this.Bonus == 200 || this.Bonus == 400){
+            if(this.Bonus == 150 || this.Bonus == 350){
 			lives++;
 			livesText.text = 'Lives: ' + lives;
             }
@@ -345,7 +345,7 @@
 	    
         update: function () {
 		////
-         if (lives == 2 && this.ghost2==null){
+         if (lives == 2 && this.ghost2==null || this.ghost2==nulll && this.game.time.totalElapsedSeconds() == 20){
 		//this.pacman.kill();
 			this.load.spritesheet('ghost2', 'assets/huntx70.png', 40, 40);
 			this.ghost2 = this.add.sprite((3 * 16) + 8, (5 * 16) + 8, 'ghost', 0);
@@ -354,7 +354,7 @@
            	this.ghost2.body.setSize(16, 16, 0, 0);
 		
          }
-		 if(lives == 1 && this.ghost3 == null){
+		 if(lives == 1 && this.ghost3 == null || this.ghost2==nulll && this.game.time.totalElapsedSeconds() == 40){
 			this.load.spritesheet('ghost3', 'assets/huntx70.png', 40, 40);
 			this.ghost3 = this.add.sprite((3 * 16) + 8, (5 * 16) + 8, 'ghost', 0);
            	this.ghost3.anchor.set(0.5);
@@ -366,8 +366,8 @@
 	   if(score >= 150 && score <= 200 ){
 				ghostSpeed = 0;
 			}
-                  else if(score >=250){
-                      ghostSpeed = 150;
+                  else if(score >=220){
+                      ghostSpeed = 180;
                   }else{
 				ghostSpeed = 100;
 			}
