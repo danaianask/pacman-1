@@ -345,7 +345,7 @@
 	    
         update: function () {
 		////
-         if (lives == 2 && this.ghost2==null || this.ghost2==nulll && this.game.time.totalElapsedSeconds() == 20){
+         if (lives == 2 && this.ghost2==null || this.ghost2==null && this.game.time.totalElapsedSeconds() == 20){
 		//this.pacman.kill();
 			this.load.spritesheet('ghost2', 'assets/huntx70.png', 40, 40);
 			this.ghost2 = this.add.sprite((3 * 16) + 8, (5 * 16) + 8, 'ghost', 0);
@@ -354,7 +354,7 @@
            	this.ghost2.body.setSize(16, 16, 0, 0);
 		
          }
-		 if(lives == 1 && this.ghost3 == null || this.ghost2==nulll && this.game.time.totalElapsedSeconds() == 40){
+		 if(lives == 1 && this.ghost3 == null || this.ghost2==null && this.game.time.totalElapsedSeconds() == 40){
 			this.load.spritesheet('ghost3', 'assets/huntx70.png', 40, 40);
 			this.ghost3 = this.add.sprite((3 * 16) + 8, (5 * 16) + 8, 'ghost', 0);
            	this.ghost3.anchor.set(0.5);
