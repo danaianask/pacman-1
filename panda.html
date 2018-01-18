@@ -354,7 +354,7 @@
            	this.ghost2.body.setSize(16, 16, 0, 0);
 		
          }
-		 if(lives == 1 && this.ghost3 == null || this.ghost3==null && Math.floor(this.game.time.totalElapsedSeconds()) == 40){
+		 if(lives == 1 && this.ghost3 == null || this.ghost3==null && Math.floor(this.game.time.totalElapsedSeconds()) == 30){
 			this.load.spritesheet('ghost3', 'assets/huntx70.png', 40, 40);
 			this.ghost3 = this.add.sprite((3 * 16) + 8, (5 * 16) + 8, 'ghost', 0);
            	this.ghost3.anchor.set(0.5);
@@ -363,7 +363,7 @@
 	    }
 		
 	     this.ghost.scale.x = 1;
-	   if(score >= 150 && score <= 160 ){
+	   if(score >= 150 && score <= 155 ){
 				ghostSpeed = 0;
 			}
                   else if(score >=180){
