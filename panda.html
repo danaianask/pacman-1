@@ -301,7 +301,7 @@
 			this.GameOver = game.add.text(45, 170, 'GAME OVER!', {font: '60px Verdana', fill: 'green'});
 			this.GameOver2 = game.add.text(45, 255, 'PLAY AGAIN!', { font: '50px Verdana', fill: "green"});
 			lives = 0;
-			livesText.text = ' ' + lives;
+			livesText.text = 'Lives ' + lives;
 			var audio = new Audio('assets/fail.mp3');
 	   		audio.play();
 			pacman.kill();
@@ -339,7 +339,7 @@
 				
 			
 			lives--;
-			livesText.text = ' ' + lives;
+			livesText.text = 'Lives ' + lives;
 		}
     },
 	    
